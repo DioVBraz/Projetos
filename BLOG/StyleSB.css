@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins" , sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    overflow-y: scroll;
+}
+
+.background{
+    background-color: green;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;   
+}
+
+header{
+    background-color: gold;
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+    padding-top: 1.0rem;     
+}
+
+h1{
+    color: gold;
+    line-height: 60px;
+    padding: 35px;
+    cursor: pointer;
+}
+
+.cabeçalho{
+    display: flex;
+    gap: 2.5rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.cabeçalho a{
+    color: green;
+    font-size: 23px;
+    margin-left: 65px;
+}
+
+.cabeçalho a:hover{
+    color:  blue;
+    transition:  0.3s all;
+}
+
+.logo img{
+    height: 60%;
+    width: 60%;
+    cursor: pointer;
+}
+
+.search-box{
+    position: absolute;
+    background: green;
+    height: 48px;
+    border-radius: 50px;
+    padding: 15px;   
+    left: 1500px;
+    top: 32px;
+}
+
+input::placeholder {
+    color: gold;
+  }
+
+.search-box a i{
+    color: gold;
+}
+
+.search-btn{
+    color: gold;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;   
+    background: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s;
+}
+
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 22px;
+    width: 240px;
+}
+
+.search-box:hover > .search-txt{
+    padding: 0 6px;
+}
+    
+.search-box:hover > .search-btn{
+    background: white;
+}
+
+.container{
+    margin-top: 40px;
+    margin-left: 35px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container .tab{
+    position: relative;
+    background: linear-gradient(135deg, gold, yellow);
+    padding: 0 20px 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.container .tab input{
+    appearance: none;
+}
+
+.container .tab label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container .tab label::after{
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 2rem;
+    color: green;
+}
+
+.container .tab input:checked ~ label::after{
+    transform: rotate(335deg);
+    color: green;
+}
+
+.container .tab:hover label::after{
+    color: green;
+}
+
+.container .tab label h2{
+    width: 40px;
+    height: 40px;
+    background: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gold;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.container .tab label h3{
+    position: relative;
+    font-weight: 500;
+    max-width: 490px;
+    color: green;
+    z-index: 10;
+}
+
+.container .tab input:checked ~ label h3{
+    color: green;
+}
+
+.container .tab .content{
+    max-height: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.container .tab input:checked ~ .content{
+    max-height: 100vh;
+}
+
+.container .tab .content p{
+    position: relative;
+    padding: 10px 0;
+    color: green;
+    z-index: 10;
+}
+
+.container .tab input:checked ~ .content p{
+    color: green;
+}
